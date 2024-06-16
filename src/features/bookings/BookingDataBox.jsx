@@ -119,6 +119,7 @@ function BookingDataBox({ booking }) {
     cabins: { name: cabinName },
   } = booking;
 
+  console.log(created_at, startDate);
   return (
     <>
       <StyledBookingDataBox>

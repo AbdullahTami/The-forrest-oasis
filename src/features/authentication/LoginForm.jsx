@@ -7,8 +7,8 @@ import FormRowVertical from "../../ui/FormRowVertical";
 import { useLogin } from "./useLogin";
 
 function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("demo-user@gmail.com");
+  const [password, setPassword] = useState("test1234");
   const { login, isLoading } = useLogin();
 
   function handleSubmit(e) {
@@ -34,6 +34,7 @@ function LoginForm() {
           // This makes this form better for password managers
           autoComplete="username"
           value={email}
+          defaultValue="demo-user@gmail.com"
           disabled={isLoading}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -42,6 +43,7 @@ function LoginForm() {
         <Input
           type="password"
           id="password"
+          defaultValue="test1234"
           disabled={isLoading}
           autoComplete="current-password"
           value={password}
